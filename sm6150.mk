@@ -28,13 +28,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
-
-# Miui-Camera
-$(call inherit-product-if-exists, vendor/xiaomi/sweet2-miuicamera/sweet2-miuicamera-vendor.mk)
-$(call inherit-product-if-exists, device/xiaomi/camera/miuicamera.mk)
-
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
